@@ -1,0 +1,109 @@
+* {
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: ubuntu;
+}
+
+.icon-ring-container {
+  width: 900px;
+  height: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+  position: relative;
+
+  background-color: white;
+
+  margin: auto;
+}
+.icon-ring-container.game-over {
+  display: none;
+}
+.info.game-over {
+  display: flex;
+}
+
+.rock,
+.paper,
+.scissors,
+.score-container {
+  flex: 0 0 45%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.icon:hover {
+  border: 0.1rem solid green;
+  transition: all 0.5s;
+  border-radius: 200rem;
+  cursor: pointer;
+}
+/* Options picking styling */
+.icon.user {
+  border-left: 0.2rem solid green;
+  border-radius: 200rem;
+  transition: all 1s;
+}
+.icon.computer {
+  border-right: 0.2rem solid red;
+  border-radius: 200rem;
+  transition: all 1s;
+}
+
+.score {
+  font-size: 3rem;
+  padding: 1rem;
+  width: 40%;
+}
+.user-score {
+  background-color: lightgreen;
+}
+.computer-score {
+  background-color: red;
+}
+img {
+  width: 75%;
+  border-radius: 10rem;
+  z-index: 2;
+}
+.icon-ring {
+  position: absolute;
+  border: 10px dotted black;
+  height: 450px;
+  width: 450px;
+  top: 225px;
+  left: 225px;
+}
+
+/* Game over state styling */
+.info > button {
+  font-size: 3rem;
+  padding: 2rem;
+  border-radius: 4rem;
+  background-color: lightgreen;
+}
+.info > button:hover {
+  background-color: lawngreen;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.info {
+  width: 900px;
+  font-size: 3rem;
+  padding: 4rem;
+  margin: auto;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header styles */
+header {
+  width: 900px;
+  margin: auto;
+  text-align: center;
+  font-size: 2rem;
+}
